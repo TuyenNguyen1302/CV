@@ -168,6 +168,10 @@ video {
     margin: 50px 0;
     color: var(--dark-brown);
 }
+.show {
+    font-weight: 900;
+    text-decoration: underline;
+}
 .header a:hover {
     font-weight: 900;
 }
@@ -183,12 +187,22 @@ video {
 /* -------------------TOGGLE ------------------- */
 .toggle {
     position: fixed;
-    top: 5px;
-    right: 5px;
+    width: 100vw;
+    height: fit-content;
+    padding: 5px 10px;
+    justify-content: space-between;
+    left: 0;
+    top: 0;
+    right: 0;
     z-index: 5;
     cursor: pointer;
-    font-size: 1.3em;
+    font-size: 1.5rem;
+    color: var(--dark-brown);
     visibility: hidden;
+}
+.toggle img {
+    width: 35px;
+    height: 35px;
 }
 .menu {
     position: fixed;
@@ -197,8 +211,15 @@ video {
     width: 100%;
     height: 100%;
     background: var(--body-bg1);
-    z-index: 3;
+    z-index: 10;
     transition: 0.5s;
+}
+.menu .close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 2.2rem;
+    cursor: pointer;
 }
 ul {
     position: absolute;
@@ -227,9 +248,13 @@ ul li:last-of-type a {
     background-image: url(./img/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 1;
+}
+.home-name {
+    font-size: 2.8rem;
 }
 .home-content p:first-of-type {
-    font-size: 1.06em;
+    font-size: 1.27rem;
     font-weight: 500;
     margin: 20px 0;
     white-space: nowrap;
@@ -256,8 +281,8 @@ ul li:last-of-type a {
     }
 }
 .avatar {
-    width: 350px;
-    height: 350px;
+    width: 22rem;
+    height: 22rem;
     border-radius: 50%;
     background: var(--bg-avatar);
     overflow: hidden;
@@ -266,8 +291,8 @@ ul li:last-of-type a {
 }
 .frame-image {
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 25rem;
+    height: 25rem;
 }
 .circle {
     position: absolute;
@@ -275,6 +300,8 @@ ul li:last-of-type a {
     top: 0;
     left: 0;
     bottom: 0;
+    width: 100%;
+    height: 100%;
     animation-name: rotateDots;
     animation-duration: 15s;
     animation-iteration-count: infinite;
@@ -298,15 +325,28 @@ ul li:last-of-type a {
     text-align: center;
 }
 .avatar-square {
-    width: 400px;
-    height: 300px;
+    width: 25rem;
+    height: 18rem;
     padding: 0 50px;
     border-radius: 15px;
     box-shadow: inset 0px 0px 10px #efcac379;
     background: linear-gradient(#fef8f6, #efcac34a);
+    position: relative;
+    z-index: 1;
+}
+.avatar-square::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    border-radius: 15px;
+    border: 1px solid var(--dark-brown);
+    width: 25rem;
+    height: 18rem;
+    z-index: -1;
 }
 .info {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 .info-detail {
     grid-gap: 30px;
@@ -391,7 +431,7 @@ ul li:last-of-type a {
     background: var(--body-bg2);
 }
 .projects {
-    grid-gap: 20px;
+    grid-gap: 50px;
 }
 .project-item {
     box-shadow: 0 0 10px #cccaca;
@@ -400,7 +440,7 @@ ul li:last-of-type a {
     flex-flow: column-reverse;
     overflow: hidden;
     padding-top: 30px;
-    width: 100%;
+    width: fit-content;
 }
 .project-head {
     width: 100%;
@@ -424,11 +464,18 @@ ul li:last-of-type a {
 .project-head .follow button {
     background: var(--brown-color);
     color: white;
-    width: fit-content;
 }
 .project-head .follow .text {
     display: inline-block;
     opacity: 1;
+}
+.project-time {
+    width: fit-content;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-weight: 500;
+    border: 1px solid #636fa49e;
 }
 /* -------------------POPUP------------------- */
 .popup {
@@ -441,7 +488,7 @@ ul li:last-of-type a {
     padding: 30px 20px;
 }
 .popup-logo {
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
 }
 .popup-content {
@@ -456,7 +503,9 @@ ul li:last-of-type a {
 }
 .popup-item {
     margin-top: 30px;
-    margin-bottom: 10px;
+    margin-bottom: 70px;
+    border: 1px double white;
+    box-shadow: 3px 3px 10px #808080;
 }
 .popup-progess {
     height: 10px;
@@ -469,8 +518,20 @@ ul li:last-of-type a {
     margin: 10px 30px;
 }
 .popup-item p {
-    margin-left: 30px;
+    margin: 0 30px;
     line-height: 30px;
+}
+.popup-title {
+    width: fit-content;
+    margin: -25px 0 20px 0;
+    border-radius: 5px;
+    padding: 5px;
+}
+.popup-title b {
+    font-size: 1.8rem;
+}
+.popup-title span {
+    font-size: 1.3rem;
 }
 .technology p span {
     border-radius: 50%;
@@ -479,13 +540,13 @@ ul li:last-of-type a {
     box-shadow: 0 0 3px #dadada;
     margin-right: 15px;
 }
-.video-popup{
-    margin-top: 20px;
+.video-popup {
+    margin: 20px;
 }
 .btn-close {
     position: fixed;
     right: 30px;
-    font-size: 40px;
+    font-size: 2rem;
 }
 .hide {
     display: none;
@@ -511,7 +572,7 @@ ul li:last-of-type a {
     margin-bottom: 30px;
     font-weight: 300;
 }
-/* RESPONSIVE */
+/* ------------------- RESPONSIVE ------------------- */
 @media screen and (max-width: 1024px) {
     .home,
     .about,
@@ -534,19 +595,25 @@ ul li:last-of-type a {
     .header {
         visibility: hidden;
     }
+    .avatar-square {
+        margin: 10px 0;
+    }
     /* HOME */
     .home {
+        height: 100vh;
+        padding: 0 10px;
         flex-direction: column;
+        justify-content: center;
         text-align: center;
-        padding: 30px 10px;
         grid-gap: 20px;
     }
     /* ABOUT */
     .about {
-        padding: 30px 10px;
+        padding: 80px 20px;
     }
     .about-intro {
         width: 100%;
+        padding: 0 20px;
         margin-bottom: 20px;
     }
     .about-info {
@@ -563,7 +630,7 @@ ul li:last-of-type a {
     }
     /* RESUME */
     .resume {
-        padding: 30px 0;
+        padding: 80px 10px;
         flex-direction: column;
     }
     .col {
@@ -575,12 +642,16 @@ ul li:last-of-type a {
     /* PROJECT */
     .project,
     .projects {
-        padding: 30px 5px;
+        padding: 80px 5px;
         flex-direction: column;
-        grid-gap: 20px;
-    } /* CONTACT */
+    } 
+    .projects{
+        flex-flow: column-reverse;
+    }
+    /* CONTACT */
     .contact {
-        padding-top: 30px;
+        padding-top: 80px;
+        padding-bottom: 80px;
         padding-right: 20px;
     }
     .contact .image {
@@ -590,7 +661,9 @@ ul li:last-of-type a {
         grid-template-columns: repeat(2, 1fr);
         text-align: left;
         grid-gap: 30px;
+        margin-top: 20px;
     }
+    /* POPUP */
     .popup-logo {
         width: 100%;
     }
@@ -602,78 +675,38 @@ ul li:last-of-type a {
     .resume,
     .project,
     .contact {
-        height: 100%;
-        width: 100vw;
-        font-size: 0.9em;
-    }
-    h1::before,
-    h1::after {
-        display: none;
-    }
-    .line {
-        display: block;
+        font-size: 1rem;
     }
     .avatar {
-        width: 95%;
-        height: 95%;
+        width: 15rem;
+        height: 15rem;
     }
     .avatar-square {
-        width: 85%;
-        height: 85%;
-        margin: 10px 0;
+        width: 20rem;
+        height: 100%;
+    }
+    .avatar-square::after {
+        border: none;
     }
     .frame-image {
-        width: 75%;
-        height: 75%;
+        width: 15.8rem;
+        height: 15.8rem;
     }
     /* HOME */
-    .home {
-        flex-direction: column;
-        text-align: center;
-    }
-    .home-content {
-        width: 100%;
-    }
     .home-content p:first-of-type {
+        margin: 10px;
         white-space: normal;
         word-break: break-word;
         animation: none;
     }
     /* ABOUT */
-    .about {
-        padding: 30px 10px;
-    }
     .about-intro {
-        margin-bottom: 20px;
-    }
-    .about-info {
-        flex-direction: column;
-    }
-    .info {
-        text-align: center;
+        padding: 0;
     }
     .info-detail {
-        text-align: left;
         display: block;
     }
-    /* RESUME */
-    .resume {
-        padding: 30px 10px;
-        flex-direction: column;
-    }
-    .col {
-        grid-gap: 30px;
-    }
-    .skills {
-        margin-top: 30px;
-    }
     /* PROJECT */
-    .project,
-    .projects {
-        padding: 30px 5px;
-        flex-direction: column;
-        grid-gap: 20px;
-    }
     .project-logo {
         width: 35%;
     }
@@ -691,14 +724,25 @@ ul li:last-of-type a {
         bottom: 10px;
     }
     /* CONTACT */
-    .contact {
-        padding-top: 30px;
-    }
     .contact .image {
         margin: 10px auto;
     }
     .contact-row {
         grid-template-columns: repeat(1, 1fr);
         text-align: center;
+    }
+    /* POPUP */
+    .popup-logo {
+        width: 100%;
+    }
+    .popup-progess {
+        width: 80%;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .home {
+        height: 100%;
+        padding: 80px 0;
     }
 }

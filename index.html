@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Template</title>
+    <title>Portfolio Personal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
@@ -21,7 +22,7 @@
             <p>Tuyen</p>
         </div>
         <div class="link">
-            <a href="#home" class="header-item">
+            <a href="#home" class="header-item show">
                 <i class='fa fa-home'></i>
                 <p>Home</p>
             </a>
@@ -44,10 +45,14 @@
         </div>
     </div>
 
-    <div class="toggle">
+    <div class="toggle middle">
+        <div class="logo">
+            <img src="./img/T.png" alt="">
+        </div>
         <i class="fa fa-bars"></i>
     </div>
     <div class="menu">
+        <i class="fa fa-close close"></i>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -57,8 +62,8 @@
             <li>
                 <a href="https://www.facebook.com/profile.php?id=100010222635132"><i
                         class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/TuyenNguyen1302/"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/tuyennguyen1302/"><i class="fa-brands fa-linkedin"></i></a>
             </li>
         </ul>
     </div>
@@ -67,26 +72,27 @@
         <!--------------------- HOME --------------------->
         <div class="home middle" id="home">
             <div class="home-content">
-                <b style="font-size: 45px;">I'm Nguyen Le Ngoc Tuyen</b>
-                <p><span class="hightlight">A</span> final year student at University of Information Technogy.</p>
-                <p style="margin-left: -10px;"><span style="font-size: 1.3em;">『 </span>
-                    <span class="hightlight"><b>Persevere</b></span> - <span class="hightlight"><b>Learn</b></span> -
-                    <span class="hightlight"><b>Work hard</b></span><span style="font-size: 1.3em;"> 』</span>
-                </p>
-                <div class="follow">
-                    <a href="https://www.facebook.com/profile.php?id=100010222635132">
-                        <span class="icon"><i class="fa-brands fa-facebook"></i></span>
-                        <span class="text">Facebook</span>
-                    </a>
-                    <a href="https://github.com/TuyenNguyen1302/">
-                        <span class="icon"><i class="fa-brands fa-github"></i></span>
-                        <span class="text">Github</span>
-                    </a>
-                    <a href="#">
-                        <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
-                        <span class="text">Linkedln</span>
-                    </a>
-                </div>
+                <b class="home-name"">I'm Nguyen Le Ngoc Tuyen</b>
+                <p><span class=" hightlight">A</span> final year student at University of Information Technogy.</p>
+                    <p style="margin-left: -10px;"><span style="font-size: 1.5rem;">『 </span>
+                        <span class="hightlight"><b>Persevere</b></span> - <span class="hightlight"><b>Learn</b></span>
+                        -
+                        <span class="hightlight"><b>Work hard</b></span><span style="font-size: 1.5rem;"> 』</span>
+                    </p>
+                    <div class="follow">
+                        <a href="https://www.facebook.com/profile.php?id=100010222635132">
+                            <span class="icon"><i class="fa-brands fa-facebook"></i></span>
+                            <span class="text">Facebook</span>
+                        </a>
+                        <a href="https://github.com/TuyenNguyen1302/">
+                            <span class="icon"><i class="fa-brands fa-github"></i></span>
+                            <span class="text">Github</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/tuyennguyen1302/">
+                            <span class="icon"><i class="fa-brands fa-linkedin"></i></span>
+                            <span class="text">Linkedln</span>
+                        </a>
+                    </div>
             </div>
             <div class="frame-image middle">
                 <div class="avatar">
@@ -103,11 +109,12 @@
                 <h1>About <span class="hightlight">me</span>
                     <p class="line"></p>
                 </h1>
-                <p style="line-height: 1.6em;"><span style="font-size: 1.4em;">❝</span> I am currently a final year
+                <p style="line-height: 2.2rem;"><span style="font-size: 1.5rem;">❝ </span> I am currently a final year
                     student of Information Technology University. During my studies, I
-                    learned the basics of web design and development. Working with HTML, CSS is what I am passionate
-                    about. So, I am looking for an opportunity to apply my skills to help my future company grow.<span
-                        style="font-size: 1.4em; color: #b97166"> ❞</span> </p>
+                    learned the basics of web design and development. Building beautiful websites using HTML, CSS is
+                    what I am passionate about. So I am looking for an opportunity to apply my skills to help the
+                    company I work for in the future grow.<span style="font-size: 1.5rem; color: #b97166"> ❞</span>
+                </p>
             </div>
             <div class="about-info middle">
                 <div class="avatar-square">
@@ -124,13 +131,13 @@
                         <div class="info-item">
                             <p>Phone: <span>0822365666</span></p>
                             <p>Mail: <span>tuyenbb1302@gmail.com</span></p>
-                            <p>Web: <span><a
+                            <p>GitHub: <span><a
                                         href="https://github.com/TuyenNguyen1302/">https://github.com/TuyenNguyen1302/</a></span>
                             </p>
                         </div>
                     </div>
                     <a class="link-down"
-                        href="https://www.canva.com/design/DAE80iyQRDA/W05fqXqnGD6AHFFoVHkquw/view?utm_content=DAE80iyQRDA&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">Download
+                        href="https://drive.google.com/drive/folders/1xIGwc4si3yPdDB8GHeyHtbz4K4VFlr38?usp=sharing">Download
                         CV</a>
                 </div>
             </div>
@@ -202,10 +209,51 @@
                 <p class="line"></p>
             </h1>
             <div class="projects middle">
+                <div class="project-item middle" style="background: #efcac3;">
+                    <div class="project-content">
+                        <p style="color: #b97166; font-weight: 700; font-size: 2.2rem; margin-bottom: 10px;">Anatole
+                            Watch Shop
+                        </p>
+                        <p class="project-time">10, March 2022 - Now</p>
+                        <div class="middle">
+                            <h3>Technology:</h3>
+                            <div class="image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/174/174854.png" alt="">
+                                <p style="text-align: center;">HTML</p>
+                            </div>
+                            <div class="image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="">
+                                <p style="text-align: center;">CSS</p>
+                            </div>
+                            <div class="image">
+                                <img src="https://cdn-icons-png.flaticon.com/512/136/136530.png" alt="">
+                                <p style="text-align: center;">JavaScript</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-head middle">
+                        <div class="project-logo">
+                            <img style="background: white; border-radius: 50%;" src="./img/anatole.png" alt="">
+                        </div>
+                        <div class="follow">
+                            <button class="open-popup" style="background: #b97166;" data-project="p1">
+                                <span class="icon"><i class="fa-solid fa-info"></i></span>
+                                <span class="text">See Detail</span>
+                            </button>
+                            <a href="https://github.com/TuyenNguyen1302/WatchShop" style="background: #b97166;">
+                                <span class="icon"><i class="fa-solid fa-code"></i></span>
+                                <span class="text">Source Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="project-item middle" style="background: #636fa45e;">
                     <div class="project-content">
-                        <p style="color: #636FA4; font-weight: 700; font-size: 2em; margin-bottom: 10px;">Me Ecommerce
+                        <p style="color: #636FA4; font-weight: 700; font-size: 2.2rem; margin-bottom: 10px;">Me
+                            Ecommerce
                         </p>
+                        <p class="project-time">18, March 2022 - Now</p>
                         <div class="middle">
                             <h3>Technology:</h3>
                             <div class="image">
@@ -219,20 +267,20 @@
                             </div>
                             <div class="image">
                                 <img src="https://cdn-icons-png.flaticon.com/512/919/919831.png" alt="">
-                                <p style="text-align: center;">SASS</p>
+                                <p style="text-align: center;">SCSS</p>
                             </div>
                         </div>
                     </div>
                     <div class="project-head middle">
-                        <div class="project-logo" style="background: none;">
+                        <div class="project-logo">
                             <img src="./img/me.png" alt="">
                         </div>
                         <div class="follow">
-                            <button class="open-popup" style="background: #636FA4;">
+                            <button class="open-popup" style="background: #636FA4;" data-project="p2">
                                 <span class="icon"><i class="fa-solid fa-info"></i></span>
                                 <span class="text">See Detail</span>
                             </button>
-                            <a href="" style="background: #636FA4;">
+                            <a href="https://github.com/TuyenNguyen1302/MeEcommerce" style="background: #636FA4;">
                                 <span class="icon"><i class="fa-solid fa-code"></i></span>
                                 <span class="text">Source Code</span>
                             </a>
@@ -252,7 +300,7 @@
                         <img src="https://cdn-icons-png.flaticon.com/512/4205/4205847.png" alt="">
                     </div>
                     <h3>Call Me On</h3>
-                    <p>0822365666</p>
+                    <a href="tel:+84822365666">0822365666</a>
                 </div>
                 <div class="contact-item">
                     <div class="image">
@@ -266,7 +314,7 @@
                         <img src="https://cdn-icons-png.flaticon.com/512/3731/3731164.png" alt="">
                     </div>
                     <h3>Email Me At</h3>
-                    <p>tuyennb1302@gmail.com</p>
+                    <a href="mailto:tuyennb1302@gmail.com">tuyenbb1302@gmail.com</a>
                 </div>
                 <div class="contact-item">
                     <div class="image">
@@ -288,13 +336,63 @@
                         <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="">
                     </div>
                     <h3>Contact Me On</h3>
-                    <a href="">Linkedln</a>
+                    <a href="https://www.linkedin.com/in/tuyennguyen1302/">www.linkedin.com/in/tuyennguyen1302</a>
                 </div>
             </div>
         </div>
     </div>
     <!--------------------- POPUP --------------------->
-    <div class="popup hide">
+    <div class="popup hide" data-popup="p1">
+        <div class="popup-content">
+            <button class="btn-close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="popup-logo">
+                <img src="./img/anatole-logo.png" alt="">
+            </div>
+            <div class="popup-item">
+                <div class="popup-title" style="background: #b97166; color: white;">
+                    <span>『 </span>
+                    <b>Description</b>
+                    <span> 』</span>
+                </div>
+                <p><span style="color: #b97166; font-weight: 900; padding-bottom: 20px;">Watch Online Shop</span> website is designed and
+                    developed according to my ideas. I can practice my HTML, CSS, JS skills.</p>
+            </div>
+            <div class="popup-item technology">
+                <div class="popup-title" style="background: #b97166; color: white;">
+                    <span>『 </span>
+                    <b>Technology</b>
+                    <span> 』</span>
+                </div>
+                <div class="popup-range">
+                    <span class="popup-progess">
+                        <span style="width: 49%; background: #E34C26;"></span>
+                        <span style="width: 29%; background: #F1E05A;"></span>
+                        <span style="width: 22%; background: #563D7C;"></span>
+                    </span>
+                </div>
+                <p><span style="background: #E34C26;">00</span>
+                    HTML</p>
+                <p><span style="background: #F1E05A;">00</span>
+                    JavaScript</p>
+                <p><span style="background: #563D7C;">00</span>
+                    CSS</p>
+            </div>
+            <div class="popup-item">
+                <div class="popup-title" style="background: #b97166; color: white;">
+                    <span>『 </span>
+                    <b>Video Demo</b>
+                    <span> 』</span>
+                </div>
+                <div class="video-popup">
+                    <video src="./img/anatole-demo.mp4" autoplay controls></video>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup hide" data-popup="p2">
         <div class="popup-content">
             <button class="btn-close">
                 <i class="fa-solid fa-xmark"></i>
@@ -303,18 +401,24 @@
                 <img src="./img/me-logo.png" alt="">
             </div>
             <div class="popup-item">
-                <span style="font-size: 1.3em;">『 </span>
-                <b style="font-size: 1.6em;">Description</b>
-                <span style="font-size: 1.3em;"> 』</span>
-                <p>Me Ecommerce website is designed and developed including functions such as:</p>
-                <p>_ View product list</p>
-                <p>_ View product details</p>
-                <p>_ View product list by category, ...</p>
+                <div class="popup-title" style="background: #636fa4; color: white;">
+                    <span>『 </span>
+                    <b>Description</b>
+                    <span> 』</span>
+                </div>
+                <p><span style="color: #636fa4; font-weight: 900;">Me Ecommerce</span> website is designed and developed
+                    including functions such as:</p>
+                <p>✔ View product list</p>
+                <p>✔ View product details</p>
+                <p>✔ View product list by category, ...</p>
+                <p style="font-weight: 900;">* Get data from the API and fetch to display in interface</p>
             </div>
             <div class="popup-item technology">
-                <span style="font-size: 1.3em;">『 </span>
-                <b style="font-size: 1.6em;">Technology</b>
-                <span style="font-size: 1.3em;"> 』</span>
+                <div class="popup-title" style="background: #636fa4; color: white;">
+                    <span>『 </span>
+                    <b>Technology</b>
+                    <span> 』</span>
+                </div>
                 <div class="popup-range">
                     <span class="popup-progess">
                         <span style="width: 53%; background: #F1E05A;"></span>
@@ -332,11 +436,11 @@
                 <p><span style="background: red;">00</span>
                     HTML</p>
             </div>
-            <div>
-                <div class="popup-item">
-                    <span style="font-size: 1.3em;">『 </span>
-                    <b style="font-size: 1.6em;">Video Demo</b>
-                    <span style="font-size: 1.3em;"> 』</span>
+            <div class="popup-item">
+                <div class="popup-title" style="background: #636fa4; color: white;">
+                    <span>『 </span>
+                    <b>Video Demo</b>
+                    <span> 』</span>
                 </div>
                 <div class="video-popup">
                     <video src="./img/me-demo.mp4" autoplay controls></video>
