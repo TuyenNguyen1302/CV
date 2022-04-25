@@ -24,6 +24,7 @@ html::-webkit-scrollbar {
 body {
     font-family: "Roboto";
     font-size: 1.2em;
+    overflow: hidden;
 }
 a {
     color: black;
@@ -574,6 +575,9 @@ ul li:last-of-type a {
 }
 /* ------------------- RESPONSIVE ------------------- */
 @media screen and (max-width: 1024px) {
+    body{
+        overflow: visible;
+    }
     .home,
     .about,
     .resume,
